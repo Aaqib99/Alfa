@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import SustainbilityBG from "../Assets/Images/SustainbilityBG.png";
-import missionIcon from "../Assets/Icons/missionicon.svg";
-import visionIcon from "../Assets/Icons/visionicon.svg";
-import goalsIcon from "../Assets/Icons/goalsicon.svg";
+import missionIcon from "../Assets/Icons/missionIcon.svg";
+import visionIcon from "../Assets/Icons/visionIcon.svg";
+import goalsIcon from "../Assets/Icons/goalsIcon.svg";
 import SustainabilityComp from "../Components/SustainabilityComp";
 
 const Sustainability = () => {
