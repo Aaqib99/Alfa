@@ -34,6 +34,10 @@ import CommercialInquiries from './Views/CommercialInquiries.jsx';
 import CareersInquiries from './Views/CareersInquiries.jsx';
 import Supplier from './Views/Supplier.jsx';
 import WhistleBlowing from './Views/WhistleBlowing.jsx';
+import PrivacyPolicy from './Views/PrivacyPolicy.jsx';
+import ScrollToTopButton from './Components/ScrollToTopButton.jsx';
+import CookiesPolicy from './Views/CookiesPolicy.jsx';
+import TermsAndConditions from './Views/TermsAndConditions.jsx';
 
 function App() {
   return (
@@ -41,6 +45,7 @@ function App() {
       <Router>
         <div className="App">
           <Navbar />
+          <ScrollToTopButton/>
           <Routes>
             {/* Who We are */}
             <Route exact path="/" element={<Home />} />
@@ -72,6 +77,10 @@ function App() {
             <Route exact path="/Careers" element={<CareersInquiries />} />
             <Route exact path="/become-a-supplier" element={<Supplier />} />
             <Route exact path="/Whistleblowing" element={<WhistleBlowing />} />
+            {/* privacy policy */}
+            <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route exact path="/cookies-policy" element={<CookiesPolicy />} />
+            <Route exact path="/terms-and-conditions" element={<TermsAndConditions />} />
 
             <Route exact path="/sustainability" element={<Sustainability />} />
             <Route exact path="/groupoverview" element={<GroupOverview />} />

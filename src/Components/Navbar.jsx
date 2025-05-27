@@ -3,11 +3,19 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../Assets/Icons/white-logo.svg";
 import { FaChevronDown } from "react-icons/fa";
-import { FaLinkedinIn, FaInstagram, FaUser, FaGlobe } from "react-icons/fa";
+import {
+  FaLinkedinIn,
+  FaInstagram,
+  FaUser,
+  FaGlobe,
+  FaTwitter,
+} from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaSearch } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 import ReactCountryFlag from "react-country-flag";
+import layoutbg from "../Assets/Images/layoutbg.png";
+import linee from "../Assets/Icons/linee.svg";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(null);
@@ -102,34 +110,46 @@ const Navbar = () => {
     <>
       <div className="flex right-0 justify-end absolute top-4 z-[1000] w-11/12 mx-auto">
         <div className=" flex justify-end text-white text-sm space-x-4 px-6 mb-2">
+          <a
+            href="https://www.linkedin.com/company/afla-marine/"
+            className="text-white hover:text-[#2C95D2]"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedinIn />
+          </a>
+          <a
+            href="https://www.instagram.com/alfa_marine_sa/"
+            className="text-white hover:text-[#2C95D2]"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram />
+          </a>
+          <a
+            href="https://x.com/alfamarinesa"
+            className="text-white hover:text-[#2C95D2]"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTwitter />
+          </a>
+          <span className="ml-4 mr-8 w-px h-5 -mt-1 bg-gray-200 inline-block align-middle"></span>
+          <a
+            href="https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000002-0000-0ff1-ce00-000000000000&redirect_uri=https%3a%2f%2foutlook.office365.com%2fowa%2f&resource=00000002-0000-0ff1-ce00-000000000000&response_mode=form_post&response_type=code+id_token&scope=openid&msafed=1&msaredir=1&client-request-id=ea0d4913-e01a-3e48-2a06-7dc4822537b9&protectedtoken=true&claims=%7b%22id_token%22%3a%7b%22xms_cc%22%3a%7b%22values%22%3a%5b%22CP1%22%5d%7d%7d%7d&domain_hint=alfamarinesa.com&nonce=638839595987907992.3d08aed2-1fd8-4878-97f4-0bd981dc03b9&state=DYtBDoAgDMBA3-AzgAnqtudMJ4mJSqIHv-_StLd651xvdqYHi8OlEBWeDUIGZM6xKJDsmsNYlcJESIGxTgFWZRp1g7Kyt3dI7ZMkZ5VLnuPeX4lbu34&sso_reload=true"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaUser className="hover:text-blue-400 transition cursor-pointer" />
+          </a>
 
           <a
-            href="https://linkedin.com"
+            href="https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000002-0000-0ff1-ce00-000000000000&redirect_uri=https%3a%2f%2foutlook.office365.com%2fowa%2f&resource=00000002-0000-0ff1-ce00-000000000000&response_mode=form_post&response_type=code+id_token&scope=openid&msafed=1&msaredir=1&client-request-id=ea0d4913-e01a-3e48-2a06-7dc4822537b9&protectedtoken=true&claims=%7b%22id_token%22%3a%7b%22xms_cc%22%3a%7b%22values%22%3a%5b%22CP1%22%5d%7d%7d%7d&domain_hint=alfamarinesa.com&nonce=638839595987907992.3d08aed2-1fd8-4878-97f4-0bd981dc03b9&state=DYtBDoAgDMBA3-AzgAnqtudMJ4mJSqIHv-_StLd651xvdqYHi8OlEBWeDUIGZM6xKJDsmsNYlcJESIGxTgFWZRp1g7Kyt3dI7ZMkZ5VLnuPeX4lbu34&sso_reload=true"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaLinkedinIn className="hover:text-blue-400 transition" />
-          </a>
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram className="hover:text-blue-400 transition" />
-          </a>
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaXTwitter className="hover:text-blue-400 transition" />
-          </a>
-          <Link to="/login">
-            <FaUser className="hover:text-blue-400 transition cursor-pointer" />
-          </Link>
-          <button onClick={() => alert("Search clicked")}>
             <FaSearch className="hover:text-blue-400 transition cursor-pointer" />
-          </button>
+          </a>
 
           {/* Language Selector */}
           <div className="relative group cursor-pointer">
@@ -151,7 +171,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-    </div>
+      </div>
       <div className="absolute top-8 z-[1000] w-11/12 mx-auto">
         <nav className="flex items-center justify-between px-6">
           <Link to="/" className="flex items-center">
@@ -204,9 +224,104 @@ const Navbar = () => {
                   )}
                 </li>
               ))}
+              {/* Hamburger Button inside menu */}
+              <li className="mt-3">
+                <button
+                  onClick={toggleMenu}
+                  className="cursor-pointer text-white text-2xl relative w-3 h-4 flex flex-col justify-between items-start space-y-[3px]"
+                >
+                  {!isOpen ? (
+                    <>
+                      <span className="block w-full h-[2px] bg-white"></span>
+                      <span className="block w-4/5 h-[2px] bg-white"></span>
+                      <span className="relative w-full h-[2px] bg-white animate-bounce-x">
+                        <span className="absolute right-[-6px] top-1/2 -translate-y-1/2 w-1.5 h-1.5 bg-white rounded-full" />
+                      </span>
+                    </>
+                  ) : (
+                    <FaTimes />
+                  )}
+                </button>
+              </li>
             </ul>
           </div>
         </nav>
+        {isOpen && (
+          <div
+            className="fixed inset-0 bg-[#20376D]/90 text-gray-200 z-[999] bg-cover bg-center overflow-hidden transition-opacity duration-500 ease-in-out opacity-100"
+            style={{ backgroundImage: `url(${layoutbg})` }}
+          >
+            {/* Close Icon */}
+            <div className="flex justify-end p-3">
+              <button onClick={closeMenu} className="text-white text-2xl">
+                <FaTimes />
+              </button>
+            </div>
+
+            {/* Grid Layout */}
+            <div className="flex-grow flex justify-center items-center">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 px-4 py-1 h-full">
+                {links.map((menu, idx) => (
+                  <div
+                    key={idx}
+                    onMouseEnter={() => setOpenMenu(menu.name)}
+                    onMouseLeave={() => setOpenMenu(null)}
+                    className="group" // Add group here
+                  >
+                    {/* Section Title with Icon */}
+                    <div className="flex items-center cursor-pointer text-base font-semibold mb-1 text-gray-300 hover:text-[#2C95D2]">
+                      <span
+                        className={`group-hover:font-bold ${
+                          openMenu === menu.name
+                            ? "font-bold text-gray-100"
+                            : ""
+                        }`}
+                      >
+                        {menu.name}
+                      </span>
+                    </div>
+
+                    {/* Line Image */}
+                    <img
+                      src={linee}
+                      alt=""
+                      className="w-30 h-auto mb-2 opacity-10 group-hover:opacity-100 transition duration-300"
+                    />
+
+                    {/* Submenu */}
+                    <ul
+                      className={`grid gap-1 ${
+                        menu.name === "WHO WE ARE" && menu.submenu.length > 6
+                          ? "grid-cols-2"
+                          : "grid-cols-1"
+                      } ${
+                        menu.name === "OUR DIVISIONS" && menu.submenu.length > 6
+                          ? "grid-cols-2"
+                          : "grid-cols-1"
+                      }`}
+                    >
+                      {menu.submenu?.map((sub, subIdx) => (
+                        <li key={subIdx}>
+                          <Link
+                            to={sub.path}
+                            onClick={closeMenu}
+                            className={`block py-1 px-2 rounded transition-all duration-200 ${
+                              openMenu === menu.name
+                                ? "opacity-100 text-white"
+                                : "opacity-10 text-gray-400"
+                            } hover:opacity-100 hover:text-[#2C95D2]`}
+                          >
+                            {sub.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );

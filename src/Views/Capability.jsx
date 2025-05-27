@@ -1,13 +1,18 @@
-import React from "react";
-import backgroundImage from "../Assets/Images/main-background.jpg";
+import React, { useEffect } from "react";
+import backgroundImage from "../Assets/Images/our-capabilities.jpeg";
 
 const Capability = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div
         className="bg-cover bg-center pt-8 pb-8 h-96 flex items-center justify-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
+        {/* Black overlay */}
+        <div className="absolute inset-0 bg-black h-96 opacity-60 z-0"></div>
         {/* Overlay Content */}
         <div className="relative flex flex-col items-center justify-center h-full text-white">
           <h1 className="text-5xl font-bold mt-24 mb-4">Our Capabilities</h1>

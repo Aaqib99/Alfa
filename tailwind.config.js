@@ -7,13 +7,13 @@ module.exports = {
   theme: {
     extend: {
       keyframes: {
-        'scale-pulse': {
-          '0%, 100%': { transform: 'scale(1)' },
-          '50%': { transform: 'scale(1.1)' },
+        bounceX: {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '50%': { transform: 'translateX(4px)' },
         },
       },
       animation: {
-        'scale-pulse': 'scale-pulse 2s ease-in-out infinite',
+        'bounce-x': 'bounceX 0.6s ease-in-out infinite',
       },
     },
   },

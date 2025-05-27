@@ -39,7 +39,7 @@ const ScrollToTopButton = () => {
           cx="50"
           cy="50"
           r="45"
-          stroke="#3b82f6"
+          stroke="#20376D"
           strokeWidth="6"
           fill="none"
           strokeDasharray="283"

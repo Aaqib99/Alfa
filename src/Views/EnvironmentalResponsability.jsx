@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import backgroundImage from "../Assets/Images/about-us.png";
+import backgroundImage from "../Assets/Images/env-responsibility.png";
 import aboutinnerbg from "../Assets/Images/our-solution.jpg";
 import sustainability from "../Assets/Images/sustainability.png";
 import innovative from "../Assets/Images/innovative.png";
@@ -14,14 +14,13 @@ const EnvironmentalResponsability = () => {
   return (
     <>
       <div
-        className="bg-cover bg-center pt-8 pb-8 h-[165vh] h-96 flex items-center justify-center"
+        className="bg-cover bg-center pt-8 pb-8 h-110 flex items-center justify-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
+            
         {/* Overlay Content */}
         <div className="relative flex flex-col items-center justify-center h-full text-white">
-          <h1 className="text-5xl font-bold mb-64 text-center">
-            Environmental Responsability
-          </h1>
+          <h1 className="text-5xl font-bold mt-24 mb-4">Environmental Responsability</h1>
         </div>
       </div>
       <div className="w-full p-4 md:p-24">

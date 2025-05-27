@@ -23,32 +23,22 @@ const Footer = () => {
             <p className="mt-8 max-w-xs text-white text-lg">
               Prince Muhammad Ibn Saud Dist, Dammam, Kingdom of Saudi Arabia
             </p>
-            {/* <div className="mt-6">
-              <h4 className="text-white mb-2">Enter Your Email</h4>
-              <form className="flex flex-col sm:flex-row">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="bg-white text-md font-bold text-custom-green px-4 py-4 sm:rounded-bl-3xl"
-                />
-                <button
-                  type="submit"
-                  className="bg-custom-dark-right text-md font-bold text-white px-6 py-4 sm:rounded-bl-none sm:rounded-tr-3xl mt-2 sm:mt-0"
-                >
-                  Subscribe
-                </button>
-              </form>
-            </div> */}
             <div className="mt-6">
               {/* Contact Info */}
               <div className="flex items-center flex-wrap sm:flex-nowrap gap-2 sm:gap-4">
-                <span className="whitespace-nowrap text-[#2C95D2] hover:text-white cursor-pointer">
+                <a
+                  href="tel:+966138052528"
+                  className="whitespace-nowrap text-[#2C95D2] hover:text-white cursor-pointer"
+                >
                   +966 13 805 2528
-                </span>
+                </a>
                 <span className="whitespace-nowrap text-white">|</span>
-                <span className="whitespace-nowrap text-[#2C95D2] hover:text-white cursor-pointer">
+                <a
+                  href="mailto:info@alfamarinesa.com"
+                  className="whitespace-nowrap text-[#2C95D2] hover:text-white cursor-pointer"
+                >
                   info@alfamarinesa.com
-                </span>
+                </a>
               </div>
 
               {/* Horizontal Gray Line */}
@@ -56,13 +46,28 @@ const Footer = () => {
 
               {/* Social Media Icons */}
               <div className="flex gap-4">
-                <a href="#" className="text-white hover:text-blue-400">
+                <a
+                  href="https://www.linkedin.com/company/afla-marine/"
+                  className="text-white hover:text-[#2C95D2]"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <FaLinkedinIn />
                 </a>
-                <a href="#" className="text-white hover:text-blue-400">
+                <a
+                  href="https://www.instagram.com/alfa_marine_sa/"
+                  className="text-white hover:text-[#2C95D2]"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <FaInstagram />
                 </a>
-                <a href="#" className="text-white hover:text-blue-400">
+                <a
+                  href="https://x.com/alfamarinesa"
+                  className="text-white hover:text-[#2C95D2]"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <FaTwitter />
                 </a>
               </div>
@@ -71,149 +76,113 @@ const Footer = () => {
           <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3">
             <div>
               <p className="font-semibold text-white text-2xl pb-1 cursor-pointer">
-                <span className="border-b-2 border-blue-400 inline-block">
+                <span className="border-b-2 border-[#2C95D2] inline-block">
                   Quick Links
                 </span>
               </p>
               <ul className="mt-6 space-y-4 text-lg">
                 <li>
-                  <ScrollLink
-                    to="home"
-                    smooth={true}
-                    duration={500}
-                    offset={-70} // Adjust based on your navbar height
-                    className="text-white transition hover:text-blue-400 hover:border-b-2 border-blue-400 pb-1 cursor-pointer"
+                  <Link
+                    to="/"
+                    className="text-white transition hover:text-[#2C95D2] hover:border-b-2 border-[#2C95D2] pb-1 cursor-pointer"
                   >
                     Home
-                  </ScrollLink>
+                  </Link>
                 </li>
                 <li>
-                  <ScrollLink
-                    to="services"
-                    smooth={true}
-                    duration={500}
-                    offset={-70} // Adjust based on your navbar height
-                    className="text-white transition hover:text-blue-400 hover:border-b-2 border-blue-400 pb-1 cursor-pointer"
+                  <Link
+                    to="/readmoreaboutcompany"
+                    className="text-white transition hover:text-[#2C95D2] hover:border-b-2 border-[#2C95D2] pb-1 cursor-pointer"
                   >
                     About us
-                  </ScrollLink>
+                  </Link>
                 </li>
                 <li>
-                  <ScrollLink
-                    to="aboutcompany"
-                    smooth={true}
-                    duration={500}
-                    offset={-70} // Adjust based on your navbar height
-                    className="text-white transition hover:text-blue-400 hover:border-b-2 border-blue-400 pb-1 cursor-pointer"
+                  <Link
+                    to="/sustainability"
+                    className="text-white transition hover:text-[#2C95D2] hover:border-b-2 border-[#2C95D2] pb-1 cursor-pointer"
                   >
                     Sustainability
-                  </ScrollLink>
+                  </Link>
                 </li>
                 <li>
-                  <ScrollLink
-                    to="contactus"
-                    smooth={true}
-                    duration={500}
-                    offset={-70} // Adjust based on your navbar height
-                    className="text-white transition hover:text-blue-400 hover:border-b-2 border-blue-400 pb-1 cursor-pointer"
+                  <Link
+                    to="/fabrication-and-machining-division"
+                    className="text-white transition hover:text-[#2C95D2] hover:border-b-2 border-[#2C95D2] pb-1 cursor-pointer"
                   >
                     Fabrication
-                  </ScrollLink>
+                  </Link>
                 </li>
               </ul>
             </div>
             <div>
               <ul className="mt-14 space-y-4 text-lg">
                 <li>
-                  <ScrollLink
-                    to="home"
-                    smooth={true}
-                    duration={500}
-                    offset={-70} // Adjust based on your navbar height
-                    className="text-white transition hover:text-blue-400 hover:border-b-2 border-blue-400 pb-1 cursor-pointer"
+                  <Link
+                    to="/our-facilities"
+                    className="text-white transition hover:text-[#2C95D2] hover:border-b-2 border-[#2C95D2] pb-1 cursor-pointer"
                   >
                     Facility
-                  </ScrollLink>
+                  </Link>
                 </li>
                 <li>
-                  <ScrollLink
-                    to="services"
-                    smooth={true}
-                    duration={500}
-                    offset={-70} // Adjust based on your navbar height
-                    className="text-white transition hover:text-blue-400 hover:border-b-2 border-blue-400 pb-1 cursor-pointer"
+                  <Link
+                    to="/ict-division"
+                    className="text-white transition hover:text-[#2C95D2] hover:border-b-2 border-[#2C95D2] pb-1 cursor-pointer"
                   >
-                    ICT division
-                  </ScrollLink>
+                    ICT Division
+                  </Link>
                 </li>
                 <li>
-                  <ScrollLink
-                    to="aboutcompany"
-                    smooth={true}
-                    duration={500}
-                    offset={-70} // Adjust based on your navbar height
-                    className="text-white transition hover:text-blue-400 hover:border-b-2 border-blue-400 pb-1 cursor-pointer"
+                  <Link
+                    to="/trading-division"
+                    className="text-white transition hover:text-[#2C95D2] hover:border-b-2 border-[#2C95D2] pb-1 cursor-pointer"
                   >
                     Trading
-                  </ScrollLink>
+                  </Link>
                 </li>
                 <li>
-                  <ScrollLink
-                    to="contactus"
-                    smooth={true}
-                    duration={500}
-                    offset={-70} // Adjust based on your navbar height
-                    className="text-white transition hover:text-blue-400 hover:border-b-2 border-blue-400 pb-1 cursor-pointer"
+                  <Link
+                    to="/marine-and-offshore-division"
+                    className="text-white transition hover:text-[#2C95D2] hover:border-b-2 border-[#2C95D2] pb-1 cursor-pointer"
                   >
                     Marine
-                  </ScrollLink>
+                  </Link>
                 </li>
               </ul>
             </div>
             <ul className="mt-14 space-y-4 text-lg">
               <li>
-                <ScrollLink
-                  to="home"
-                  smooth={true}
-                  duration={500}
-                  offset={-70} // Adjust based on your navbar height
-                  className="text-white transition hover:text-blue-400 hover:border-b-2 border-blue-400 pb-1 cursor-pointer"
+                <Link
+                  to="/core-values"
+                  className="text-white transition hover:text-[#2C95D2] hover:border-b-2 border-[#2C95D2] pb-1 cursor-pointer"
                 >
                   Core Values
-                </ScrollLink>
+                </Link>
               </li>
               <li>
-                <ScrollLink
-                  to="services"
-                  smooth={true}
-                  duration={500}
-                  offset={-70} // Adjust based on your navbar height
-                  className="text-white transition hover:text-blue-400 hover:border-b-2 border-blue-400 pb-1 cursor-pointer"
+                <Link
+                  to="/health-safety-and-environmental-policy"
+                  className="text-white transition hover:text-[#2C95D2] hover:border-b-2 border-[#2C95D2] pb-1 cursor-pointer"
                 >
                   HSE Policy
-                </ScrollLink>
+                </Link>
               </li>
               <li>
-                <ScrollLink
-                  to="aboutcompany"
-                  smooth={true}
-                  duration={500}
-                  offset={-70} // Adjust based on your navbar height
-                  className="text-white transition hover:text-blue-400 hover:border-b-2 border-blue-400 pb-1 cursor-pointer"
+                <Link
+                  to="/accreditations"
+                  className="text-white transition hover:text-[#2C95D2] hover:border-b-2 border-[#2C95D2] pb-1 cursor-pointer"
                 >
                   Accreditations
-                </ScrollLink>
+                </Link>
               </li>
               <li>
-                <ScrollLink
-                  to="contactus"
-                  smooth={true}
-                  duration={500}
-                  offset={-70} // Adjust based on your navbar height
-                  className="text-white transition hover:text-blue-400 hover:border-b-2 border-blue-400 pb-1 cursor-pointer"
+                <Link
+                  to="/ethics-and-compliance"
+                  className="text-white transition hover:text-[#2C95D2] hover:border-b-2 border-[#2C95D2] pb-1 cursor-pointer"
                 >
                   Ethics & Compliance
-                </ScrollLink>
+                </Link>
               </li>
             </ul>
           </div>
@@ -225,15 +194,21 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex items-center gap-x-2">
-            <p className="text-xs text-white transition hover:text-blue-400 hover:border-b-2 border-blue-400 pb-1 cursor-pointer">
-              Privacy Policy |
-            </p>
-            <p className="text-xs text-white transition hover:text-blue-400 hover:border-b-2 border-blue-400 pb-1 cursor-pointer">
-              Policy Center |
-            </p>
-            <p className="text-xs text-white transition hover:text-blue-400 hover:border-b-2 border-blue-400 pb-1 cursor-pointer">
-              Terms & Conditions
-            </p>
+            <Link to="/privacy-policy">
+              <p className="text-xs text-white transition hover:text-[#2C95D2] hover:border-b-2 border-[#2C95D2] pb-1 cursor-pointer">
+                Privacy Policy |
+              </p>
+            </Link>
+            <Link to="/cookies-policy">
+              <p className="text-xs text-white transition hover:text-[#2C95D2] hover:border-b-2 border-[#2C95D2] pb-1 cursor-pointer">
+                Cookies Policy |
+              </p>
+            </Link>
+            <Link to="/terms-and-conditions">
+              <p className="text-xs text-white transition hover:text-[#2C95D2] hover:border-b-2 border-[#2C95D2] pb-1 cursor-pointer">
+                Terms & Conditions
+              </p>
+            </Link>
           </div>
         </div>
       </div>

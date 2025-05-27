@@ -8,7 +8,7 @@ import logo4 from "../Assets/Images/logo4.png";
 import logo5 from "../Assets/Images/logo5.png";
 import logo6 from "../Assets/Images/logo6.png";
 import logo7 from "../Assets/Images/logo7.png";
-import logo8 from "../Assets/Images/logo8.png";
+// import logo8 from "../Assets/Images/logo8.png";
 import logo9 from "../Assets/Images/logo9.png";
 import logo10 from "../Assets/Images/logo10.png";
 import logo11 from "../Assets/Images/logo11.png";
@@ -21,7 +21,7 @@ import logo17 from "../Assets/Images/logo17.png";
 import logo19 from "../Assets/Images/logo19.png";
 
 const logos = [
-  logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo10,
+  logo2, logo3, logo4, logo5, logo6, logo7, logo9, logo10,
   logo11, logo12, logo13, logo14, logo15, logo16, logo17, logo19,
 ];
 
@@ -35,7 +35,7 @@ const OurClients = () => {
           className="flex gap-16 w-max"
           animate={{ x: ["0%", "-50%"] }} // Already in motion
           transition={{
-            duration: 45, // slower than 90% over half the distance
+            duration:25, // slower than 90% over half the distance
             repeat: Infinity,
             ease: "linear",
           }}

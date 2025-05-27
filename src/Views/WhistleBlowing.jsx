@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import backgroundImage from "../Assets/Images/about-us.png";
+import backgroundImage from "../Assets/Images/whistle.png";
 import contactuscall from "../Assets/Icons/callus.svg";
 import contactusemail from "../Assets/Icons/emailus.svg";
 
@@ -25,12 +25,12 @@ const WhistleBlowing = () => {
   return (
     <>
       <div
-        className="bg-cover bg-center pt-8 pb-8 h-[165vh] h-96 flex items-center justify-center"
+        className="bg-cover bg-center pt-8 pb-8 h-110 flex items-center justify-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         {/* Overlay Content */}
         <div className="relative flex flex-col items-center justify-center h-full text-white">
-          <h1 className="text-5xl font-bold mb-64 text-center">
+          <h1 className="text-5xl font-bold mt-14 mb-4 text-center">
             Whistle Blowing
           </h1>
         </div>

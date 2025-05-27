@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import backgroundImage from "../Assets/Images/contactusbg.jpg";
+import backgroundImage from "../Assets/Images/markup.png";
 import contactuscall from "../Assets/Icons/callus.svg";
 import contactusemail from "../Assets/Icons/emailus.svg";
 // import ContactUsOurOffic from '../Components/ContactUsOurOffic';
@@ -33,8 +33,8 @@ const ContactUs = () => {
       >
         <div className="relative flex flex-col items-center justify-center h-full text-white">
           <h1
-            className="text-5xl font-bold mt-20 mb-16"
-            style={{ color: "#20376D" }}
+            className="text-5xl font-bold mb-30 text-white"
+            // style={{ color: "#20376D" }}
           >
             Contact Us
           </h1>

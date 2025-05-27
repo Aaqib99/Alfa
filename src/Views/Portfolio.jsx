@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import backgroundImage from "../Assets/Images/inner-page-hero.jpg"
 import PortfolioComp from '../Components/PortfolioComp';
 
 const Portfolio = () => {
+  useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   return (
     <>
       <div

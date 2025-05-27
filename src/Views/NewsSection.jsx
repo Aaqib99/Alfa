@@ -1,10 +1,13 @@
-import React from "react";
+import React, {useEffect} from "react";
 import NewsCard from "../Components/NewsCard";
 import image1 from "../Assets/Images/GroupOverview.jpeg";
 import image2 from "../Assets/Images/ceo-image.jpeg";
 import backgroundImage from "../Assets/Images/aboutcompanyimage.jpg";
 
 const NewsSection = () => {
+  useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   const newsList = [
     {
       image: image1,

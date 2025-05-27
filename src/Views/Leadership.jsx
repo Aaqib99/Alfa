@@ -1,8 +1,11 @@
-import React from "react";
+import React, {useEffect} from "react";
 import profileImg from "../Assets/Images/ceo-image1.jpg";
 import SustainbilityBG from "../Assets/Images/SustainbilityBG.png";
 
 const Leadership = () => {
+  useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   return (
     <>
       <div

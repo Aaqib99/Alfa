@@ -1,7 +1,6 @@
 import React,{useEffect} from 'react';
 import HeroSection from '../Components/HeroSection';
 import AboutUSComp from '../Components/AboutUSComp';
-import ScrollToTopButton from '../Components/ScrollToTopButton';
 import ContactUs from './ContactUs';
 import CeoMessage from '../Components/CeoMessage';
 import WhyChooseUs from '../Components/WhyChooseUs';
@@ -37,13 +36,11 @@ const Home = () => {
       <div id="ourclients">
         <OurClients />
       </div>
-      <div id="aboutcompany">
-        <AboutUSComp />
-      </div>
-      <div id="contactus">
+      
+      {/* <div id="contactus">
         <ContactUs />
-      </div>
-      <ScrollToTopButton />
+      </div> */}
+      {/* <ScrollToTopButton /> */}
       {/* <Counter/> */}
       {/* <PortfolioComp/> */}
       {/* <TestimonialComp/> */}

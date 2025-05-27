@@ -2,12 +2,17 @@ import React, { useEffect } from "react";
 import backgroundImage from "../Assets/Images/about-us.png";
 import aboutinnerbg from "../Assets/Images/our-solution.jpg";
 import sustainability from "../Assets/Images/sustainability.png";
-import innovative from "../Assets/Images/innovative.png";
+import innovative from "../Assets/Images/main5a.png";
+import blasting from "../Assets/Images/main4.jpg";
+import electrical from "../Assets/Images/main2.png";
+import thermal from "../Assets/Images/main5.jpg";
 import yellowicon from "../Assets/Icons/yellowicon.svg";
 import pinkicon from "../Assets/Icons/pinkicon.svg";
+import AboutUSComp from "../Components/AboutUSComp";
 
 // import AboutUSComp from '../Components/AboutUSComp';
 const AboutUs = () => {
+  
   const aboutdetails = [
     {
       logo: yellowicon,
@@ -40,12 +45,12 @@ const AboutUs = () => {
   return (
     <>
       <div
-        className="bg-cover bg-center pt-8 pb-8 h-[165vh] h-96 flex items-center justify-center"
+        className="bg-cover bg-center pt-8 pb-8 h-110 flex items-center justify-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         {/* Overlay Content */}
         <div className="relative flex flex-col items-center justify-center h-full text-white">
-          <h1 className="text-5xl font-bold mb-64 text-center">
+          <h1 className="text-5xl font-bold mt-14 mb-4 text-center">
             About Company
           </h1>
         </div>
@@ -81,7 +86,7 @@ const AboutUs = () => {
           projects.
         </p>
       </div>
-
+      <AboutUSComp/>
       <div
         className="relative bg-cover bg-center pt-8 pb-8 flex items-center justify-center"
         style={{ backgroundImage: `url(${aboutinnerbg})` }}
@@ -165,7 +170,7 @@ const AboutUs = () => {
             </p>
           </div>
           <div className="md:w-2/2 flex justify-center md:justify-end">
-            <img src={innovative} alt="About Us" className="mr-24 w-48 h-48" />
+            <img src={blasting} alt="About Us" className="mr-24 w-48 h-48" />
           </div>
         </div>
         <div className="flex flex-col gap-16 md:flex-row md:justify-between p-6 mb-16">
@@ -182,7 +187,7 @@ const AboutUs = () => {
             </p>
           </div>
           <div className="md:w-2/2 flex justify-center md:justify-end">
-            <img src={innovative} alt="About Us" className="mr-24 w-48 h-48" />
+            <img src={electrical} alt="About Us" className="mr-24 w-48 h-48" />
           </div>
         </div>
         <div className="flex flex-col gap-16 md:flex-row md:justify-between p-6 mb-16">
@@ -199,7 +204,7 @@ const AboutUs = () => {
             </p>
           </div>
           <div className="md:w-2/2 flex justify-center md:justify-end">
-            <img src={innovative} alt="About Us" className="mr-24 w-48 h-48" />
+            <img src={thermal} alt="About Us" className="mr-24 w-48 h-48" />
           </div>
         </div>
         <p className="text-lg mt-4" style={{ color: "#20376D" }}>

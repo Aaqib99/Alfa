@@ -1,11 +1,6 @@
 import React, { useEffect } from "react";
-import backgroundImage from "../Assets/Images/about-us.png";
-import aboutinnerbg from "../Assets/Images/our-solution.jpg";
-import sustainability from "../Assets/Images/sustainability.png";
-import innovative from "../Assets/Images/innovative.png";
-import yellowicon from "../Assets/Icons/yellowicon.svg";
-import pinkicon from "../Assets/Icons/pinkicon.svg";
-import { Link } from "react-router-dom";
+import backgroundImage from "../Assets/Images/commercial-inquiries.png";
+import ContactUs from "./ContactUs";
 
 // import AboutUSComp from '../Components/AboutUSComp';
 const CommercialInquiries = () => {
@@ -15,12 +10,13 @@ const CommercialInquiries = () => {
   return (
     <>
       <div
-        className="bg-cover bg-center pt-8 pb-8 h-[165vh] h-96 flex items-center justify-center"
+        className="bg-cover bg-center pt-8 pb-8 h-110 flex items-center justify-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
+        <div className="absolute inset-0 h-110 bg-black/40 "></div>
         {/* Overlay Content */}
         <div className="relative flex flex-col items-center justify-center h-full text-white">
-          <h1 className="text-5xl font-bold mb-64 text-center">
+          <h1 className="text-5xl font-bold mt-24 mb-4 text-center">
             Commercial Inquiries
           </h1>
         </div>
@@ -66,10 +62,11 @@ const CommercialInquiries = () => {
                 d="M14 5l7 7m0 0l-7 7m7-7H3"
               />
             </svg>
-            <span className="absolute inset-0 bg-black transition-all duration-500 transform -translate-x-full group-hover:translate-x-0 z-0"></span>
+            <span className="absolute inset-0 bg-[#20376D] transition-all duration-500 transform -translate-x-full group-hover:translate-x-0 z-0"></span>
           </button>
         </a>
       </div>
+      <ContactUs />
       {/* <div
         className="relative bg-cover h-[340px] bg-center pt-8 pb-8 flex items-center justify-center"
         style={{ backgroundImage: `url(${aboutinnerbg})` }}

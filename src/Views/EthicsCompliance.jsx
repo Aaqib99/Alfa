@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import backgroundImage from "../Assets/Images/about-us.png";
-import aboutinnerbg from "../Assets/Images/our-solution.jpg";
+import backgroundImage from "../Assets/Images/eac2a.png";
+import aboutinnerbg from "../Assets/Images/eac2a-below.png";
 import sustainability from "../Assets/Images/sustainability.png";
 import innovative from "../Assets/Images/innovative.png";
 import yellowicon from "../Assets/Icons/yellowicon.svg";
@@ -14,12 +14,12 @@ const EthicsCompliance = () => {
   return (
     <>
       <div
-        className="bg-cover bg-center pt-8 pb-8 h-[165vh] h-96 flex items-center justify-center"
+        className="bg-cover bg-center pt-8 pb-8 h-110 flex items-center justify-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         {/* Overlay Content */}
         <div className="relative flex flex-col items-center justify-center h-full text-white">
-          <h1 className="text-5xl font-bold mb-64 text-center">
+          <h1 className="text-5xl font-bold mt-24 mb-4 text-center">
             Ethics & Compliance
           </h1>
         </div>
@@ -46,7 +46,7 @@ const EthicsCompliance = () => {
       </div>
 
       <div
-        className="relative bg-cover h-[340px] bg-center pt-8 pb-8 flex items-center justify-center"
+        className="relative bg-cover h-[440px] bg-center pt-8 pb-8 flex items-center justify-center"
         style={{ backgroundImage: `url(${aboutinnerbg})` }}
       >
       </div>

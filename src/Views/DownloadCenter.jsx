@@ -1,11 +1,14 @@
-import React from "react";
-import backgroundImage from "../Assets/Images/aboutcompanyimage.jpg";
+import React, {useEffect} from "react";
+import backgroundImage from "../Assets/Images/download-center.png";
 import { FaFilePdf } from "react-icons/fa";
 // import AlfaPDF from "../../public/profile.pdf";
 // import AlfaSVG from "../../public/logo.svg";
 // import AlfaPNG from "../../public/logo.png";
 
 const DownloadCenter = () => {
+  useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   const downloads = [
   {
     title: "Profile",
@@ -45,7 +48,7 @@ const DownloadCenter = () => {
         className="relative h-[85vh] bg-cover bg-center flex items-center justify-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
-        <div className="absolute inset-0 bg-black/80 "></div>
+        <div className="absolute inset-0 bg-black/40 "></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-white">
           <h1 className="text-5xl font-bold text-center">Download Center</h1>
         </div>

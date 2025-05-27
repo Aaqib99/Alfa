@@ -1,6 +1,6 @@
 import React from "react";
-import marineImage from "../Assets/Images/main-background.jpg";
-import backgroundImage from "../Assets/Images/main-background.jpg";
+import marineImage from "../Assets/Images/construction2a.png";
+import backgroundImage from "../Assets/Images/main2a.png";
 
 const ConstructionDivision = () => {
   return (
@@ -16,11 +16,11 @@ const ConstructionDivision = () => {
           </h1>
         </div>
       </div>
-      <div className="relative bg-[#012c4c] text-white">
+      <div className="relative bg-[#20376D] text-white">
         <div className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-start">
           {/* Text Section */}
           <div>
-            <h2 className="text-sm font-semibold text-[#3799EF] uppercase mb-2">
+            <h2 className="text-sm font-semibold text-[#2C95D2] uppercase mb-2">
               What We Do
             </h2>
             <h1 className="text-2xl sm:text-3xl font-bold uppercase mb-4">

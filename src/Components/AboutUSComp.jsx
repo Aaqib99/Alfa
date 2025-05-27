@@ -8,15 +8,15 @@ const AboutUSComp = () => {
   const aboutdetails = [
     {
       logo: yellowicon,
-      title: "UK Suppliers",
+      title: "Contruction Division",
       description:
-        "As trusted energy brokers and consultants, we understand the challenges of managing business energy needs.",
+        "ALFA Construction Division delivers high-quality services in Civil Construction and MEP Contracting.",
     },
     {
       logo: pinkicon,
-      title: "Energy Market",
+      title: "ICT Division",
       description:
-        "It's no surprise that many organizations rely on experienced professionals like us for guidance and support.",
+        "ALFA ICT Division as a trusted technology partner, offers end-to-end ICT, Low Current and Smart Building Solutions.",
     },
   ];
 
@@ -45,7 +45,7 @@ const AboutUSComp = () => {
       <div className="container mt-16 mx-auto mb-8 px-4 md:px-16 py-8 flex flex-col md:flex-row md:justify-between">
         <div className="md:w-1/2">
           <h5
-            className="inline-block text-custom-green font-medium bg-light-green-background rounded-full px-6 py-1"
+            className="inline-block text-custom-green font-medium bg-light-green-background rounded-full py-1"
             style={{ color: "#20376D" }}
           >
             ABOUT US
@@ -55,16 +55,15 @@ const AboutUSComp = () => {
             style={{ color: "#20376D" }}
           >
             Mission is: <br />
-            Minimizing the burden of <br />
-            High Energy Bills
+            Marine & Offshore <br />
+            Division
           </h2>
 
           <p
             className="text-lg text-gray-700 mb-4"
             style={{ color: "#20376D" }}
           >
-            As leading energy consultants in the UK, we specialize in providing
-            cost-effective solutions tailored to your needs.
+            ALFA Group Established in 2014 and headquartered in Dammam, Saudi Arabia. ALFA Group is a steadily growing multi-division company supporting major industries across the Middle East.
           </p>
 
           <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
@@ -96,13 +95,13 @@ const AboutUSComp = () => {
             ))}
           </div>
 
-          <div className="mt-6 flex justify-start md:justify-start">
+          {/* <div className="mt-6 flex justify-start md:justify-start">
             <Link to="/readmoreaboutcompany">
               <button className=" text-md font-bold text-white px-10 py-4 rounded-bl-3xl rounded-tr-3xl" style={{backgroundColor:"#20376D" }}>
                 More About Company
               </button>
             </Link>
-          </div>
+          </div> */}
         </div>
 
         <div className="md:w-1/2 mt-4 flex justify-center md:mt-16">
