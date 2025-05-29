@@ -8,7 +8,6 @@ const WhyChooseUs = () => {
       <div className="mt-24 flex items-center justify-center">
         <div className="container mx-auto px-4 md:px-8 flex flex-col items-center justify-center">
           <div className="md:w-full text-center">
-            {/* <h5 className="text-lg text-custom-blue font-bold mb-2">OUR SERVICES</h5> */}
             <h3
               className="text-3xl md:text-4xl font-bold mb-4"
               style={{ color: "#20376D" }}

@@ -39,7 +39,7 @@ const Supplier = () => {
           These documents must be filled in and attached to the <span className="font-bold" style={{ color: "#20376D" }}>ALFA Supplier Registration Portal.</span>
         </p>
         <a
-          href="https://us.bigin.online/org886525305/forms/contact-us"
+          href="https://books.zohosecure.com/portal/alfamarine/signin"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -48,7 +48,7 @@ const Supplier = () => {
     flex items-center gap-2 group"
           >
             <span className="relative z-10 group-hover:text-[#2196F3] transition duration-500">
-              Contact Us
+              Supplier Portal
             </span>
             <svg
               xmlns="http://www.w3.org/2000/svg"

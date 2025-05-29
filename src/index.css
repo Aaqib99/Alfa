@@ -64,3 +64,14 @@
   scrollbar-color: #2C95D2 #f1f1f1;
 }
 
+
+/* .scroll-snap-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.scroll-snap-child {
+  scroll-snap-align: start;
+  height: 100vh;
+} */

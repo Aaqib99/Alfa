@@ -1,12 +1,13 @@
-import React,{useEffect} from 'react';
-import HeroSection from '../Components/HeroSection';
-import AboutUSComp from '../Components/AboutUSComp';
-import ContactUs from './ContactUs';
-import CeoMessage from '../Components/CeoMessage';
-import WhyChooseUs from '../Components/WhyChooseUs';
-import AlfaAtGlance from '../Components/AlfaAtGlance';
-import OurPresence from '../Components/OurPresence';
-import OurClients from '../Components/OurClient';
+import React, { useEffect } from "react";
+import HeroSection from "../Components/HeroSection";
+import AboutUSComp from "../Components/AboutUSComp";
+import ContactUs from "./ContactUs";
+import CeoMessage from "../Components/CeoMessage";
+import WhyChooseUs from "../Components/WhyChooseUs";
+import AlfaAtGlance from "../Components/AlfaAtGlance";
+import OurPresence from "../Components/OurPresence";
+import OurClients from "../Components/OurClient";
+import SectionWrapper from "../Components/SectionWrapper";
 // import Counter from '../Components/Counter';
 // import PortfolioComp from '../Components/PortfolioComp';
 // import TestimonialComp from '../Components/TestimonialComp';
@@ -20,23 +21,22 @@ const Home = () => {
       <div id="home">
         <HeroSection />
       </div>
-      <div id="ceomessage">
+      <SectionWrapper id="ceomessage">
         <CeoMessage />
-      </div>
-      
-      <div id="whychooseus">
+      </SectionWrapper>
+      <SectionWrapper id="whychooseus">
         <WhyChooseUs />
-      </div>
-      <div id="alfaatglance">
+      </SectionWrapper>
+      <SectionWrapper id="alfaatglance">
         <AlfaAtGlance />
-      </div>
-      <div id="ourpresence">
+      </SectionWrapper>
+      <SectionWrapper id="ourpresence">
         <OurPresence />
-      </div>
-      <div id="ourclients">
+      </SectionWrapper>
+      <SectionWrapper id="ourclients">
         <OurClients />
-      </div>
-      
+      </SectionWrapper>
+
       {/* <div id="contactus">
         <ContactUs />
       </div> */}
@@ -46,6 +46,6 @@ const Home = () => {
       {/* <TestimonialComp/> */}
     </>
   );
-}
+};
 
 export default Home;

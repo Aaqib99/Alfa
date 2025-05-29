@@ -41,7 +41,7 @@ const Navbar = () => {
   const links = [
     {
       name: "WHO WE ARE",
-      path: "/who-we-are",
+      // path: "/who-we-are",
       submenu: [
         { name: "Group Overview", path: "/groupoverview" },
         { name: "Sustainability", path: "/sustainability" },
@@ -56,7 +56,7 @@ const Navbar = () => {
     },
     {
       name: "OUR DIVISIONS",
-      path: "/our-divisions",
+      // path: "/our-divisions",
       submenu: [
         { name: "Marine & Offshore", path: "/marine-and-offshore-division" },
         { name: "Construction", path: "/construction-division" },
@@ -72,7 +72,7 @@ const Navbar = () => {
     },
     {
       name: "SUSTAINABILITY",
-      path: "/sustainability",
+      // path: "/sustainability",
       submenu: [
         {
           name: "Environmental Responsibility",
@@ -88,17 +88,18 @@ const Navbar = () => {
     },
     {
       name: "MEDIA CENTER",
-      path: "/media",
+      // path: "/media",
       submenu: [
         { name: "News", path: "/news" },
         { name: "Download Center", path: "/download-center" },
       ],
     },
     {
-      name: "CONTACT US",
-      path: "/contact",
+      name: "GET IN TOUCH",
+      // path: "/contact",
       submenu: [
         { name: "Commercial Inquiries", path: "/commercial-inquiries" },
+        { name: "Contact us", path: "/contact" },
         { name: "Careers", path: "/Careers" },
         { name: "Become a Supplier", path: "/become-a-supplier" },
         { name: "Whistleblowing", path: "/Whistleblowing" },
@@ -144,9 +145,9 @@ const Navbar = () => {
           </a>
 
           <a
-            href="https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000002-0000-0ff1-ce00-000000000000&redirect_uri=https%3a%2f%2foutlook.office365.com%2fowa%2f&resource=00000002-0000-0ff1-ce00-000000000000&response_mode=form_post&response_type=code+id_token&scope=openid&msafed=1&msaredir=1&client-request-id=ea0d4913-e01a-3e48-2a06-7dc4822537b9&protectedtoken=true&claims=%7b%22id_token%22%3a%7b%22xms_cc%22%3a%7b%22values%22%3a%5b%22CP1%22%5d%7d%7d%7d&domain_hint=alfamarinesa.com&nonce=638839595987907992.3d08aed2-1fd8-4878-97f4-0bd981dc03b9&state=DYtBDoAgDMBA3-AzgAnqtudMJ4mJSqIHv-_StLd651xvdqYHi8OlEBWeDUIGZM6xKJDsmsNYlcJESIGxTgFWZRp1g7Kyt3dI7ZMkZ5VLnuPeX4lbu34&sso_reload=true"
-            target="_blank"
-            rel="noopener noreferrer"
+          // href="https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000002-0000-0ff1-ce00-000000000000&redirect_uri=https%3a%2f%2foutlook.office365.com%2fowa%2f&resource=00000002-0000-0ff1-ce00-000000000000&response_mode=form_post&response_type=code+id_token&scope=openid&msafed=1&msaredir=1&client-request-id=ea0d4913-e01a-3e48-2a06-7dc4822537b9&protectedtoken=true&claims=%7b%22id_token%22%3a%7b%22xms_cc%22%3a%7b%22values%22%3a%5b%22CP1%22%5d%7d%7d%7d&domain_hint=alfamarinesa.com&nonce=638839595987907992.3d08aed2-1fd8-4878-97f4-0bd981dc03b9&state=DYtBDoAgDMBA3-AzgAnqtudMJ4mJSqIHv-_StLd651xvdqYHi8OlEBWeDUIGZM6xKJDsmsNYlcJESIGxTgFWZRp1g7Kyt3dI7ZMkZ5VLnuPeX4lbu34&sso_reload=true"
+          // target="_blank"
+          // rel="noopener noreferrer"
           >
             <FaSearch className="hover:text-blue-400 transition cursor-pointer" />
           </a>
@@ -228,14 +229,14 @@ const Navbar = () => {
               <li className="mt-3">
                 <button
                   onClick={toggleMenu}
-                  className="cursor-pointer text-white text-2xl relative w-3 h-4 flex flex-col justify-between items-start space-y-[3px]"
+                  className="cursor-pointer text-white text-2xl relative w-3 h-4 flex flex-col justify-between items-start space-y-[3px] group"
                 >
                   {!isOpen ? (
                     <>
-                      <span className="block w-full h-[2px] bg-white"></span>
-                      <span className="block w-4/5 h-[2px] bg-white"></span>
-                      <span className="relative w-full h-[2px] bg-white animate-bounce-x">
-                        <span className="absolute right-[-6px] top-1/2 -translate-y-1/2 w-1.5 h-1.5 bg-white rounded-full" />
+                      <span className="block w-full h-[2px] bg-white group-hover:bg-[#2C95D2] transition-colors duration-200"></span>
+                      <span className="block w-4/5 h-[2px] bg-white group-hover:bg-[#2C95D2] transition-colors duration-200"></span>
+                      <span className="relative w-full h-[2px] bg-white animate-bounce-x group-hover:bg-[#2C95D2] transition-colors duration-200">
+                        <span className="absolute right-[-6px] top-1/2 -translate-y-1/2 w-1.5 h-1.5 bg-white rounded-full group-hover:bg-[#2C95D2] transition-colors duration-200" />
                       </span>
                     </>
                   ) : (
@@ -247,81 +248,87 @@ const Navbar = () => {
           </div>
         </nav>
         {isOpen && (
-          <div
-            className="fixed inset-0 bg-[#20376D]/90 text-gray-200 z-[999] bg-cover bg-center overflow-hidden transition-opacity duration-500 ease-in-out opacity-100"
-            style={{ backgroundImage: `url(${layoutbg})` }}
-          >
-            {/* Close Icon */}
-            <div className="flex justify-end p-3">
-              <button onClick={closeMenu} className="text-white text-2xl">
-                <FaTimes />
-              </button>
-            </div>
+  <>
+    <div
+      className="fixed inset-0 bg-[#20376D]/90 text-gray-200 z-[999] bg-cover bg-center overflow-hidden transition-opacity duration-500 ease-in-out opacity-100"
+      style={{ backgroundImage: `url(${layoutbg})` }}
+    >
+      {/* Header section with logo and close button */}
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4">
+        <Link to="/" className="flex items-center mb-2 sm:mb-0">
+          <img src={logo} alt="Logo" className="h-auto w-20" />
+        </Link>
+        <button onClick={closeMenu} className="cursor-pointer text-white text-xl sm:text-2xl">
+          <FaTimes />
+        </button>
+      </div>
 
-            {/* Grid Layout */}
-            <div className="flex-grow flex justify-center items-center">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 px-4 py-1 h-full">
-                {links.map((menu, idx) => (
-                  <div
-                    key={idx}
-                    onMouseEnter={() => setOpenMenu(menu.name)}
-                    onMouseLeave={() => setOpenMenu(null)}
-                    className="group" // Add group here
-                  >
-                    {/* Section Title with Icon */}
-                    <div className="flex items-center cursor-pointer text-base font-semibold mb-1 text-gray-300 hover:text-[#2C95D2]">
-                      <span
-                        className={`group-hover:font-bold ${
-                          openMenu === menu.name
-                            ? "font-bold text-gray-100"
-                            : ""
-                        }`}
-                      >
-                        {menu.name}
-                      </span>
-                    </div>
-
-                    {/* Line Image */}
-                    <img
-                      src={linee}
-                      alt=""
-                      className="w-30 h-auto mb-2 opacity-10 group-hover:opacity-100 transition duration-300"
-                    />
-
-                    {/* Submenu */}
-                    <ul
-                      className={`grid gap-1 ${
-                        menu.name === "WHO WE ARE" && menu.submenu.length > 6
-                          ? "grid-cols-2"
-                          : "grid-cols-1"
-                      } ${
-                        menu.name === "OUR DIVISIONS" && menu.submenu.length > 6
-                          ? "grid-cols-2"
-                          : "grid-cols-1"
-                      }`}
-                    >
-                      {menu.submenu?.map((sub, subIdx) => (
-                        <li key={subIdx}>
-                          <Link
-                            to={sub.path}
-                            onClick={closeMenu}
-                            className={`block py-1 px-2 rounded transition-all duration-200 ${
-                              openMenu === menu.name
-                                ? "opacity-100 text-white"
-                                : "opacity-10 text-gray-400"
-                            } hover:opacity-100 hover:text-[#2C95D2]`}
-                          >
-                            {sub.name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
+      {/* Grid Layout */}
+      <div className="flex-grow flex justify-center items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 px-4 py-1 h-full">
+          {links.map((menu, idx) => (
+            <div
+              key={idx}
+              onMouseEnter={() => setOpenMenu(menu.name)}
+              onMouseLeave={() => setOpenMenu(null)}
+              className="group"
+            >
+              {/* Section Title with Icon */}
+              <div className="flex items-center cursor-pointer text-xl font-semibold mb-2 text-gray-300 hover:text-[#2C95D2]">
+                <span
+                  className={`group-hover:font-bold ${
+                    openMenu === menu.name
+                      ? "font-bold text-[#2C95D2]"
+                      : ""
+                  }`}
+                >
+                  {menu.name}
+                </span>
               </div>
+
+              {/* Line Image */}
+              <img
+                src={linee}
+                alt=""
+                className="w-30 h-auto mb-2 opacity-10 group-hover:opacity-100 transition duration-300"
+              />
+
+              {/* Submenu */}
+              <ul
+                className={`grid gap-1 ${
+                  menu.name === "WHO WE ARE" && menu.submenu.length > 6
+                    ? "grid-cols-2"
+                    : "grid-cols-1"
+                } ${
+                  menu.name === "OUR DIVISIONS" && menu.submenu.length > 6
+                    ? "grid-cols-2"
+                    : "grid-cols-1"
+                }`}
+              >
+                {menu.submenu?.map((sub, subIdx) => (
+                  <li key={subIdx}>
+                    <Link
+                      to={sub.path}
+                      onClick={closeMenu}
+                      className={`block py-1 px-2 rounded transition-all duration-200 text-[1.05rem] ${
+                        openMenu === menu.name
+                          ? "opacity-100 text-white"
+                          : "opacity-10 text-gray-400"
+                      } hover:opacity-100 hover:text-[#2C95D2]`}
+                    >
+                      {sub.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
-        )}
+          ))}
+        </div>
+      </div>
+    </div>
+  </>
+)}
+
       </div>
     </>
   );

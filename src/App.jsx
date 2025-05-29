@@ -74,6 +74,7 @@ function App() {
             <Route exact path="/download-center" element={<DownloadCenter/>} />
             {/* Contact us */}
             <Route exact path="/commercial-inquiries" element={<CommercialInquiries />} />
+            <Route exact path="/contact" element={<ContactUs />} />
             <Route exact path="/Careers" element={<CareersInquiries />} />
             <Route exact path="/become-a-supplier" element={<Supplier />} />
             <Route exact path="/Whistleblowing" element={<WhistleBlowing />} />
@@ -86,7 +87,6 @@ function App() {
             <Route exact path="/groupoverview" element={<GroupOverview />} />
             <Route exact path="/readmoreaboutcompany" element={<AboutUs />} />
             <Route exact path="/portfolio" element={<Portfolio />} />
-            <Route exact path="/contact" element={<ContactUs />} />
             <Route exact path="/getstarted" element={<GetStarted />} />
             {/* <Route exact path="/readmore/:id" element={<ReadMore/>}/> */}
             <Route exact path="/:serviceName" element={<ReadMore />} />

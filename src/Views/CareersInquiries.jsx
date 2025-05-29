@@ -1,17 +1,13 @@
 import React, { useEffect } from "react";
 import backgroundImage from "../Assets/Images/careers.png";
-import aboutinnerbg from "../Assets/Images/our-solution.jpg";
-import sustainability from "../Assets/Images/sustainability.png";
-import innovative from "../Assets/Images/innovative.png";
-import yellowicon from "../Assets/Icons/yellowicon.svg";
-import pinkicon from "../Assets/Icons/pinkicon.svg";
-import { Link } from "react-router-dom";
 
 // import AboutUSComp from '../Components/AboutUSComp';
 const CareersInquiries = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+ 
   return (
     <>
       <div
@@ -20,9 +16,7 @@ const CareersInquiries = () => {
       >
         {/* Overlay Content */}
         <div className="relative flex flex-col items-center justify-center h-full text-white">
-          <h1 className="text-5xl font-bold mt-12 mb-4 text-center">
-            Careers Inquiries
-          </h1>
+          <h1 className="text-5xl font-bold mt-12 mb-4 text-center">Careers</h1>
         </div>
       </div>
       <div className="w-full p-4 md:p-24">
@@ -30,7 +24,7 @@ const CareersInquiries = () => {
           className="text-4xl font-bold mb-4 text-center md:text-left"
           style={{ color: "#20376D" }}
         >
-          Careers Inquiries
+          Careers
         </h1>
         <p className="text-lg mt-4" style={{ color: "#20376D" }}>
           Life at ALFA, we are committed to unlocking the full potential of our
@@ -47,52 +41,19 @@ const CareersInquiries = () => {
           career with us and be part of a team that strives for continuous
           growth and innovation.
         </p>
-        <a
-          href="https://us.bigin.online/org886525305/forms/contact-us"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button
-            className="relative overflow-hidden mt-6 px-10 py-3 rounded-full text-lg font-bold shadow-lg text-white bg-[#2196F3] duration-500 cursor-pointer
-    flex items-center gap-2 group"
-          >
-            <span className="relative z-10 group-hover:text-[#2196F3] transition duration-500">
-              Contact Us
-            </span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-4 h-4 relative z-10 group-hover:text-[#2196F3] transition duration-500"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M14 5l7 7m0 0l-7 7m7-7H3"
-              />
-            </svg>
-            <span className="absolute inset-0 bg-[#20376D] transition-all duration-500 transform -translate-x-full group-hover:translate-x-0 z-0"></span>
-          </button>
-        </a>
-        <h2
-          className="mt-8 text-2xl font-bold mb-4 text-center md:text-left"
-          style={{ color: "#2C95D2" }}
-        >
-          Our Career
-        </h2>
         <h2
           className="text-2xl mt-4 font-bold mb-4 text-center md:text-left"
           style={{ color: "#20376D" }}
         >
           JOIN OUR TEAM
         </h2>
-        <form className="bg-gray-100 p-6 rounded-lg mt-4">
+        
+        <form className="bg-gray-100 p-6 rounded-lg mt-4" action="https://getform.io/f/awnwqovb" method="POST" enctype="multipart/form-data">
           <div className="mb-4">
             <label className="block text-gray-700 font-bold mb-2">Name</label>
             <input
               type="text"
+              name="user_name"
               placeholder="Name"
               className="w-full px-4 py-2 border rounded-md"
             />
@@ -105,6 +66,7 @@ const CareersInquiries = () => {
               </label>
               <input
                 type="email"
+                name="user_email" 
                 placeholder="Email"
                 required
                 className="w-full px-4 py-2 border rounded-md"
@@ -116,6 +78,7 @@ const CareersInquiries = () => {
               </label>
               <input
                 type="tel"
+                name="user_phone" // 👈 ADD THIS
                 placeholder="Phone Number"
                 required
                 className="w-full px-4 py-2 border rounded-md"
@@ -129,6 +92,7 @@ const CareersInquiries = () => {
             </label>
             <input
               type="file"
+              name="user_cv" // 👈 ADD THIS
               required
               className="border border-gray-800 rounded px-3 py-2"
             />

@@ -4,6 +4,7 @@ import contactuscall from "../Assets/Icons/callus.svg";
 import contactusemail from "../Assets/Icons/emailus.svg";
 // import ContactUsOurOffic from '../Components/ContactUsOurOffic';
 // import Form from '../Components/Form';
+import SustainbilityBG from "../Assets/Images/SustainbilityBG.png";
 
 const ContactUs = () => {
   useEffect(() => {
@@ -26,7 +27,14 @@ const ContactUs = () => {
 
   return (
     <>
-      <div className="h-12"></div>
+       <div
+              className="bg-cover mb-24 bg-center h-[70vh] flex items-center justify-center"
+              style={{ backgroundImage: `url(${SustainbilityBG})` }}
+            >
+              <h1 className="text-5xl text-white font-bold mt-24 mb-4">
+                Alfa 24/7 Support
+              </h1>
+            </div>
       <div
         className="bg-cover bg-center pt-8 pb-8 h-96 flex items-center justify-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}

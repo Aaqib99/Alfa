@@ -66,7 +66,7 @@ const CommercialInquiries = () => {
           </button>
         </a>
       </div>
-      <ContactUs />
+      {/* <ContactUs /> */}
       {/* <div
         className="relative bg-cover h-[340px] bg-center pt-8 pb-8 flex items-center justify-center"
         style={{ backgroundImage: `url(${aboutinnerbg})` }}
