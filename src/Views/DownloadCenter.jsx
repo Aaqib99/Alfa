@@ -45,10 +45,10 @@ const DownloadCenter = () => {
   return (
     <>
       <div
-        className="relative h-[85vh] bg-cover bg-center flex items-center justify-center"
+        className="bg-cover bg-center h-[110vh] flex items-center justify-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
-        <div className="absolute inset-0 bg-black/40 "></div>
+        <div className="absolute inset-0 bg-black/40 h-[110vh]"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-white">
           <h1 className="text-5xl font-bold text-center">Download Center</h1>
         </div>

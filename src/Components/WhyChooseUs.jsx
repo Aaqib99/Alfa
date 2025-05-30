@@ -1,5 +1,6 @@
 import React from "react";
 import ServiceCard from "./ServiceCard";
+import { motion } from "framer-motion";
 import ChooseUsCard from "./ChooseUsCard";
 
 const WhyChooseUs = () => {
@@ -7,6 +8,13 @@ const WhyChooseUs = () => {
     <>
       <div className="mt-24 flex items-center justify-center">
         <div className="container mx-auto px-4 md:px-8 flex flex-col items-center justify-center">
+          <motion.div
+          className="md:w-2/2 mb-6 md:mb-0"
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1,delay: 0.2, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.3 }}
+        >
           <div className="md:w-full text-center">
             <h3
               className="text-3xl md:text-4xl font-bold mb-4"
@@ -29,6 +37,7 @@ const WhyChooseUs = () => {
               Our Advantages
             </h5>
           </div>
+          </motion.div>
           {/* <div className="md:w-1/3 mt-4 md:mt-0 flex justify-end">
       <button className="bg-custom-blue text-lg font-bold text-white px-10 py-3 rounded-bl-3xl rounded-tr-3xl border-2 border-sky-500 hover:border-2 hover:border-sky-500 hover:text-sky-500 hover:transition hover:duration-500 hover:from-transparent hover:bg-transparent hover:to-sky-500">
         See All Services

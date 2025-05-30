@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import UpArrow from '../Assets/Icons/up-arrow.svg';
+import React, { useEffect, useState } from "react";
+import UpArrow from "../Assets/Icons/up-arrow.svg";
 
 const ScrollToTopButton = () => {
   const [scroll, setScroll] = useState(0);
@@ -12,25 +12,25 @@ const ScrollToTopButton = () => {
   };
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <div
       className="fixed bottom-6 right-6 w-12 h-12 rounded-full cursor-pointer z-50 flex items-center justify-center"
       onClick={scrollToTop}
-      style={{ backgroundColor: 'transparent' }}
+      style={{ backgroundColor: "transparent" }}
     >
       <svg className="absolute w-full h-full" viewBox="0 0 100 100">
         <circle
           cx="50"
           cy="50"
-          r="45"
+          r="43"
           stroke="#d1e9ff"
           strokeWidth="6"
           fill="none"

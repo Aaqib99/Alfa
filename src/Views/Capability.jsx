@@ -8,14 +8,14 @@ const Capability = () => {
   return (
     <>
       <div
-        className="bg-cover bg-center pt-8 pb-8 h-96 flex items-center justify-center"
+        className="bg-cover bg-center h-[110vh] flex items-center justify-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         {/* Black overlay */}
-        <div className="absolute inset-0 bg-black h-96 opacity-60 z-0"></div>
+        <div className="absolute h-[110vh] inset-0 bg-black h-96 opacity-60 z-0"></div>
         {/* Overlay Content */}
         <div className="relative flex flex-col items-center justify-center h-full text-white">
-          <h1 className="text-5xl font-bold mt-24 mb-4">Our Capabilities</h1>
+          <h1 className="text-5xl font-bold mb-4">Our Capabilities</h1>
         </div>
       </div>
       <div className="max-w-4xl mx-auto px-6 py-10 text-[#2C2C2C]">

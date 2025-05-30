@@ -8,6 +8,7 @@ import AlfaAtGlance from "../Components/AlfaAtGlance";
 import OurPresence from "../Components/OurPresence";
 import OurClients from "../Components/OurClient";
 import SectionWrapper from "../Components/SectionWrapper";
+import OurDivisions from "./OurDivisions";
 // import Counter from '../Components/Counter';
 // import PortfolioComp from '../Components/PortfolioComp';
 // import TestimonialComp from '../Components/TestimonialComp';
@@ -21,6 +22,9 @@ const Home = () => {
       <div id="home">
         <HeroSection />
       </div>
+      <SectionWrapper id="ourdivisions">
+        <OurDivisions />
+      </SectionWrapper>
       <SectionWrapper id="ceomessage">
         <CeoMessage />
       </SectionWrapper>

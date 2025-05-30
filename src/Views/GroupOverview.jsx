@@ -14,13 +14,13 @@ const GroupOverview = () => {
   return (
     <>
       <div
-        className="bg-cover bg-center h-[140vh] flex items-center justify-center"
+        className="bg-cover bg-center h-[110vh] flex items-center justify-center"
         style={{ backgroundImage: `url(${GroupOverviewImage})` }}
       >
         {/* Dark Overlay */}
-        <div className="absolute h-[140vh] inset-0 bg-black opacity-70 z-0"></div>
+        <div className="absolute h-[110vh] inset-0 bg-black opacity-70 z-0"></div>
         <div className="relative flex flex-col items-center justify-center h-full text-white">
-          <h1 className="text-5xl font-bold mt-24 mb-4">Group Overview</h1>
+          <h1 className="text-5xl font-bold mb-4">Group Overview</h1>
         </div>
       </div>
 

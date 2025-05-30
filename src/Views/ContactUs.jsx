@@ -28,10 +28,10 @@ const ContactUs = () => {
   return (
     <>
        <div
-              className="bg-cover mb-24 bg-center h-[70vh] flex items-center justify-center"
+              className="bg-cover bg-center h-[110vh] flex items-center justify-center"
               style={{ backgroundImage: `url(${SustainbilityBG})` }}
             >
-              <h1 className="text-5xl text-white font-bold mt-24 mb-4">
+              <h1 className="text-5xl text-white font-bold mb-4">
                 Alfa 24/7 Support
               </h1>
             </div>

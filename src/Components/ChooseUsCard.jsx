@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import OneStop from "../Assets/Icons/one-stop.svg";
 import Industry from "../Assets/Icons/industry.svg";
 import Proven from "../Assets/Icons/proven.svg";
@@ -9,16 +9,6 @@ import Innovation from "../Assets/Icons/innovation.svg";
 import Regional from "../Assets/Icons/regional.svg";
 
 const ChooseUsCard = () => {
-  const delayClasses = [
-    "delay-0",
-    "delay-1",
-    "delay-2",
-    "delay-3",
-    "delay-4",
-    "delay-5",
-  ];
-  const randomDelay =
-    delayClasses[Math.floor(Math.random() * delayClasses.length)];
   const cards = [
     {
       id: 1,
@@ -64,29 +54,45 @@ const ChooseUsCard = () => {
     },
   ];
 
+  // Direction-based animation offset
+  const getInitialPosition = (index) => {
+    const directions = [
+      { x: -50, y: 0 }, // left
+      { x: 50, y: 0 },  // right
+      { x: 0, y: -50 }, // top
+      { x: 0, y: 50 },  // bottom
+    ];
+    return directions[index % directions.length];
+  };
+
   return (
     <div className="mt-12 container mx-auto mb-16 px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-      {cards.map((card) => (
-        <div
-          key={card.id}
-          className="bg-transparent border border-custom-green p-6 rounded-lg shadow-xl text-center flex flex-col items-center transition-all duration-300 hover:shadow-2xl"
-        >
-          <div className="mb-4">
-            <img
-              src={card.logo}
-              alt={card.title}
-              className={`h-8 w-8 scale-pulse ${randomDelay}`}
-            />
-          </div>
+      {cards.map((card, index) => {
+        const initialPos = getInitialPosition(index);
 
-          <h3 className="text-xl font-bold mb-2" style={{ color: "#20376D" }}>
-            {card.title}
-          </h3>
+        return (
+          <motion.div
+            key={card.id}
+            initial={{ opacity: 0, ...initialPos }}
+            whileInView={{ opacity: 1, x: 0, y: 0 }}
+            transition={{ duration: 0.8, delay: index * 0.1, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.3 }}
+            className="bg-transparent border border-custom-green p-6 rounded-lg shadow-xl text-center flex flex-col items-center transition-all duration-300 hover:shadow-2xl"
+          >
+            <div className="mb-4">
+              <img
+                src={card.logo}
+                alt={card.title}
+                className="h-8 w-8"
+              />
+            </div>
 
-          {/* You can add card.description if available */}
-          {/* <p className="text-sm" style={{ color: "#20376D" }}>{card.description}</p> */}
-        </div>
-      ))}
+            <h3 className="text-xl font-bold mb-2" style={{ color: "#20376D" }}>
+              {card.title}
+            </h3>
+          </motion.div>
+        );
+      })}
     </div>
   );
 };

@@ -10,13 +10,13 @@ const CommercialInquiries = () => {
   return (
     <>
       <div
-        className="bg-cover bg-center pt-8 pb-8 h-110 flex items-center justify-center"
+        className="bg-cover bg-center h-[110vh] flex items-center justify-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
-        <div className="absolute inset-0 h-110 bg-black/40 "></div>
+        <div className="absolute inset-0 h-110 bg-black/40 h-[110vh]"></div>
         {/* Overlay Content */}
         <div className="relative flex flex-col items-center justify-center h-full text-white">
-          <h1 className="text-5xl font-bold mt-24 mb-4 text-center">
+          <h1 className="text-5xl font-bold mb-4 text-center">
             Commercial Inquiries
           </h1>
         </div>

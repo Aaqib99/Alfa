@@ -11,12 +11,12 @@ const CookiesPolicy = () => {
   return (
     <>
       <div
-        className="bg-cover bg-center pt-8 pb-8 h-[165vh] h-96 flex items-center justify-center"
+        className="bg-cover bg-center h-[110vh] flex items-center justify-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         {/* Overlay Content */}
         <div className="relative flex flex-col items-center justify-center h-full text-white">
-          <h1 className="text-5xl font-bold mb-64 text-center">
+          <h1 className="text-5xl font-bold mb-4 text-center">
             Cookies Policy
           </h1>
         </div>

@@ -64,6 +64,13 @@
   scrollbar-color: #2C95D2 #f1f1f1;
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
 /* .scroll-snap-container {
   scroll-snap-type: y mandatory;

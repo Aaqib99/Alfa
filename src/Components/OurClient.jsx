@@ -21,21 +21,43 @@ import logo17 from "../Assets/Images/logo17.png";
 import logo19 from "../Assets/Images/logo19.png";
 
 const logos = [
-  logo2, logo3, logo4, logo5, logo6, logo7, logo9, logo10,
-  logo11, logo12, logo13, logo14, logo15, logo16, logo17, logo19,
+  logo2,
+  logo3,
+  logo4,
+  logo5,
+  logo6,
+  logo7,
+  logo9,
+  logo10,
+  logo11,
+  logo12,
+  logo13,
+  logo14,
+  logo15,
+  logo16,
+  logo17,
+  logo19,
 ];
 
 const OurClients = () => {
   return (
     <div className="w-full bg-white py-10 overflow-hidden">
-      <h2 className="text-3xl font-bold text-center text-blue-900 mb-8 mt-18">Our Clients</h2>
+      <motion.h2
+        className="text-3xl font-bold text-center text-blue-900 mb-8 mt-18"
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.8, ease: "easeOut" }}
+        viewport={{ once: false, amount: 0.5 }}
+      >
+        Our Clients
+      </motion.h2>
 
       <div className="relative w-full mt-18">
         <motion.div
           className="flex gap-16 w-max"
           animate={{ x: ["0%", "-50%"] }} // Already in motion
           transition={{
-            duration:25, // slower than 90% over half the distance
+            duration: 25, // slower than 90% over half the distance
             repeat: Infinity,
             ease: "linear",
           }}

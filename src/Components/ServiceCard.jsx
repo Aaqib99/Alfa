@@ -59,7 +59,7 @@ const ServiceCard = () => {
         "The Facility Management Division ensures the seamless operation, maintenance, and optimization of built environments. Our services range from HVAC and electrical maintenance to cleaning, landscaping, and security. We use modern tools and smart technologies to manage facilities efficiently. Our goal is to enhance comfort, safety, and productivity within client premises. Tailored service models ensure cost-effectiveness and reliability.",
     },
     {
-      id: 6,
+      id: 7,
       link: "joinery-division",
       logo: Joinery,
       title: "Joinery Division",
