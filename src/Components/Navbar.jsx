@@ -11,7 +11,6 @@ import {
   FaGlobe,
   FaTwitter,
 } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 import { FaSearch } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 import ReactCountryFlag from "react-country-flag";
@@ -117,156 +116,184 @@ const Navbar = () => {
 
   return (
     <>
-      <div
-        className={`fixed right-0 top-0 pt-3 w-full z-[1000] transition-all duration-300 ${
-          isSticky ? "bg-white text-[#393939] shadow-md" : "text-white"
-        }`}
-      >
-        <div className="flex justify-end text-sm space-x-4 px-6 mb-2 sticky top-0 bg-inherit z-[1000]">
-          <a
-            href="https://www.linkedin.com/company/afla-marine/"
-            className="hover:text-[#2C95D2]"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedinIn />
-          </a>
-          <a
-            href="https://www.instagram.com/alfa_marine_sa/"
-            className="hover:text-[#2C95D2]"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram />
-          </a>
-          <a
-            href="https://x.com/alfamarinesa"
-            className="hover:text-[#2C95D2]"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaTwitter />
-          </a>
-          <span
-            className={`ml-4 mr-8 w-px h-5 -mt-1 inline-block align-middle transition-colors duration-300 ${
-              isSticky ? "bg-black" : "bg-gray-200"
+      {!isOpen && (
+        <>
+          <div
+            className={`fixed right-0 top-0 pt-3 w-full z-[1000] transition-all duration-300 ${
+              isSticky ? "bg-white text-[#393939] shadow-md" : "text-white"
             }`}
-          />
-          <a
-            href="https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000002-0000-0ff1-ce00-000000000000&redirect_uri=https%3a%2f%2foutlook.office365.com%2fowa%2f&resource=00000002-0000-0ff1-ce00-000000000000&response_mode=form_post&response_type=code+id_token&scope=openid&msafed=1&msaredir=1&client-request-id=ea0d4913-e01a-3e48-2a06-7dc4822537b9&protectedtoken=true&claims=%7b%22id_token%22%3a%7b%22xms_cc%22%3a%7b%22values%22%3a%5b%22CP1%22%5d%7d%7d%7d&domain_hint=alfamarinesa.com&nonce=638839595987907992.3d08aed2-1fd8-4878-97f4-0bd981dc03b9&state=DYtBDoAgDMBA3-AzgAnqtudMJ4mJSqIHv-_StLd651xvdqYHi8OlEBWeDUIGZM6xKJDsmsNYlcJESIGxTgFWZRp1g7Kyt3dI7ZMkZ5VLnuPeX4lbu34&sso_reload=true"
-            target="_blank"
-            rel="noopener noreferrer"
           >
-            <FaUser className="hover:text-blue-400 transition cursor-pointer" />
-          </a>
+            <div className="flex justify-end text-sm space-x-4 px-6 mb-2 sticky top-0 bg-inherit z-[1000]">
+              <a
+                href="https://www.linkedin.com/company/afla-marine/"
+                className="hover:text-[#2C95D2]"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedinIn />
+              </a>
+              <a
+                href="https://www.instagram.com/alfa_marine_sa/"
+                className="hover:text-[#2C95D2]"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href="https://x.com/alfamarinesa"
+                className="hover:text-[#2C95D2]"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaTwitter />
+              </a>
+              <span
+                className={`ml-4 mr-8 w-px h-5 -mt-1 inline-block align-middle transition-colors duration-300 ${
+                  isSticky ? "bg-black" : "bg-gray-200"
+                }`}
+              />
+              <a
+                href="https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000002-0000-0ff1-ce00-000000000000&redirect_uri=https%3a%2f%2foutlook.office365.com%2fowa%2f&resource=00000002-0000-0ff1-ce00-000000000000&response_mode=form_post&response_type=code+id_token&scope=openid&msafed=1&msaredir=1&client-request-id=ea0d4913-e01a-3e48-2a06-7dc4822537b9&protectedtoken=true&claims=%7b%22id_token%22%3a%7b%22xms_cc%22%3a%7b%22values%22%3a%5b%22CP1%22%5d%7d%7d%7d&domain_hint=alfamarinesa.com&nonce=638839595987907992.3d08aed2-1fd8-4878-97f4-0bd981dc03b9&state=DYtBDoAgDMBA3-AzgAnqtudMJ4mJSqIHv-_StLd651xvdqYHi8OlEBWeDUIGZM6xKJDsmsNYlcJESIGxTgFWZRp1g7Kyt3dI7ZMkZ5VLnuPeX4lbu34&sso_reload=true"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaUser className="hover:text-blue-400 transition cursor-pointer" />
+              </a>
 
-          <a>
-            <FaSearch className="hover:text-blue-400 transition cursor-pointer" />
-          </a>
+              <a>
+                <FaSearch className="hover:text-blue-400 transition cursor-pointer" />
+              </a>
 
-          {/* Language Selector */}
-          <div className="relative group cursor-pointer">
-            <div className="flex items-center space-x-1 hover:text-blue-400 transition z-40">
-              <FaGlobe />
-              <IoIosArrowDown />
-            </div>
+              {/* Language Selector */}
+              <div className="relative group cursor-pointer">
+                <div className="flex items-center space-x-1 hover:text-blue-400 transition z-40">
+                  <FaGlobe />
+                  <IoIosArrowDown />
+                </div>
 
-            {/* Dropdown Menu */}
-            <div className="absolute right-0 mt-2 bg-[#A9A9A9]/90 text-white shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transform -translate-y-2 transition-all duration-300 z-50">
-              <ul className="w-32">
-                <li className="flex items-center hover:bg-[#2C95D2] pl-4 py-2 w-full">
-                  English
-                </li>
-                <li className="flex items-center hover:bg-[#2C95D2] pl-4 py-2 w-full">
-                  العربية
-                </li>
-              </ul>
+                {/* Dropdown Menu */}
+                <div className="absolute right-0 mt-2 bg-[#A9A9A9]/90 text-white shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transform -translate-y-2 transition-all duration-300 z-50">
+                  <ul className="w-32">
+                    <li className="flex items-center hover:bg-[#2C95D2] pl-4 py-2 w-full">
+                      English
+                    </li>
+                    <li className="flex items-center hover:bg-[#2C95D2] pl-4 py-2 w-full">
+                      العربية
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div
-        className={`fixed top-7 left-0 w-full z-[1000] transition-all duration-300 ${
-          isSticky ? "bg-white font-medium text-[#393939] shadow-md" : "text-white"
-        }`}
-      >
-        <div className="flex items-center justify-between w-11/12 mx-auto">
-          <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center">
-              <img src={isSticky ? ColorLogo : logo} alt="Logo" className="h-auto w-36" />
-            </Link>
-          </div>
+          <div
+            className={`fixed top-7 left-0 w-full z-[1000] transition-all duration-300 ${
+              isSticky
+                ? "bg-white font-medium text-[#393939] shadow-md"
+                : "text-white"
+            }`}
+          >
+            <div className="flex items-center justify-between w-11/12 mx-auto">
+              <div className="flex-shrink-0">
+                <Link to="/" className="flex items-center">
+                  <img
+                    src={isSticky ? ColorLogo : logo}
+                    alt="Logo"
+                    className="h-auto w-36"
+                  />
+                </Link>
+              </div>
 
-          <nav className="flex-grow text-center">
-            <ul className="flex justify-center space-x-6 uppercase text-sm font-medium">
-              {links.map((menu, idx) => (
-                <li
-                  key={idx}
-                  className="relative group cursor-pointer"
-                  onMouseEnter={() => setOpenMenu(menu.name)}
-                >
-                  <div className="py-2">
-                    <Link
-                      to={menu.path}
-                      className={`hover:text-blue-400 ${
-                        openMenu === menu.name
-                          ? "text-blue-400 border-b-2 border-blue-400"
-                          : ""
-                      }`}
+              <nav className="flex-grow text-center">
+                <ul className="flex justify-center space-x-6 uppercase text-sm font-medium">
+                  {links.map((menu, idx) => (
+                    <li
+                      key={idx}
+                      className="relative group cursor-pointer"
+                      onMouseEnter={() => setOpenMenu(menu.name)}
                     >
-                      {menu.name}
-                      {menu.submenu && (
-                        <FaChevronDown className="inline ml-1 text-xs" />
+                      <div className="py-2">
+                        <Link
+                          to={menu.path}
+                          className={`hover:text-blue-400 ${
+                            openMenu === menu.name
+                              ? "text-blue-400 border-b-2 border-blue-400"
+                              : ""
+                          }`}
+                        >
+                          {menu.name}
+                          {menu.submenu && (
+                            <FaChevronDown className="inline ml-1 text-xs" />
+                          )}
+                        </Link>
+                      </div>
+
+                      {openMenu === menu.name && (
+                        <ul
+                          className={`absolute ${
+                            menu.name === "CONTACT US" ? "right-0" : "left-0"
+                          } mt-2 bg-white/20 backdrop-blur-md text-white py-4 shadow-xl space-y-2 w-64 z-50 pointer-events-auto`}
+                          onMouseLeave={() => setOpenMenu(null)}
+                        >
+                          {menu.submenu.map((sub, subIdx) => (
+                            <li key={subIdx}>
+                              <Link
+                                to={sub.path}
+                                className="block w-full py-3 px-4 text-left hover:bg-[#2C95D2] hover:text-white transition-all duration-300"
+                              >
+                                <span className="ml-3 block text-left">
+                                  {sub.name}
+                                </span>
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
                       )}
-                    </Link>
-                  </div>
-
-                  {openMenu === menu.name && (
-                    <ul
-                      className={`absolute ${
-                        menu.name === "CONTACT US" ? "right-0" : "left-0"
-                      } mt-2 bg-white/20 backdrop-blur-md text-white py-4 shadow-xl space-y-2 w-64 z-50 pointer-events-auto`}
-                      onMouseLeave={() => setOpenMenu(null)}
+                    </li>
+                  ))}
+                  {/* Hamburger Button inside menu */}
+                  <li className="mt-3">
+                    <button
+                      onClick={toggleMenu}
+                      className={`cursor-pointer text-white text-2xl relative w-3 h-4 flex flex-col justify-between items-start space-y-[3px] group`}
                     >
-                      {menu.submenu.map((sub, subIdx) => (
-                        <li key={subIdx}>
-                          <Link
-                            to={sub.path}
-                            className="block w-full py-3 px-4 text-left hover:bg-[#2C95D2] hover:text-white transition-all duration-300"
+                      {!isOpen ? (
+                        <>
+                          <span
+                            className={`block w-full h-[2px] ${
+                              isSticky ? "bg-black" : "bg-white"
+                            } group-hover:bg-[#2C95D2] transition-colors duration-200`}
+                          ></span>
+                          <span
+                            className={`block w-4/5 h-[2px] ${
+                              isSticky ? "bg-black" : "bg-white"
+                            } group-hover:bg-[#2C95D2] transition-colors duration-200`}
+                          ></span>
+                          <span
+                            className={`relative w-full h-[2px] ${
+                              isSticky ? "bg-black" : "bg-white"
+                            } animate-bounce-x group-hover:bg-[#2C95D2] transition-colors duration-200`}
                           >
-                            <span className="ml-3 block text-left">
-                              {sub.name}
-                            </span>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
-              ))}
-              {/* Hamburger Button inside menu */}
-              <li className="mt-3">
-                <button
-                  onClick={toggleMenu}
-                  className="cursor-pointer text-white text-2xl relative w-3 h-4 flex flex-col justify-between items-start space-y-[3px] group"
-                >
-                  {!isOpen ? (
-                    <>
-                      <span className="block w-full h-[2px] bg-white group-hover:bg-[#2C95D2] transition-colors duration-200"></span>
-                      <span className="block w-4/5 h-[2px] bg-white group-hover:bg-[#2C95D2] transition-colors duration-200"></span>
-                      <span className="relative w-full h-[2px] bg-white animate-bounce-x group-hover:bg-[#2C95D2] transition-colors duration-200">
-                        <span className="absolute right-[-6px] top-1/2 -translate-y-1/2 w-1.5 h-1.5 bg-white rounded-full group-hover:bg-[#2C95D2] transition-colors duration-200" />
-                      </span>
-                    </>
-                  ) : (
-                    <FaTimes />
-                  )}
-                </button>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
+                            <span
+                              className={`absolute right-[-6px] top-1/2 -translate-y-1/2 w-1.5 h-1.5 ${
+                                isSticky ? "bg-black" : "bg-white"
+                              } rounded-full group-hover:bg-[#2C95D2] transition-colors duration-200`}
+                            />
+                          </span>
+                        </>
+                      ) : (
+                        <FaTimes
+                          className={isSticky ? "text-black" : "text-white"}
+                        />
+                      )}
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </>
+      )}
       {isOpen && (
         <>
           <div
